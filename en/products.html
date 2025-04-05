@@ -29,20 +29,39 @@
       <div class="bg-yellow-50 border border-yellow-200 p-4 rounded mb-6">
         <p class="text-lg text-yellow-800 font-semibold">Launch Offer: <span class="text-2xl text-red-600">$110</span> (Original $220, limited to first 50 orders)</p>
       </div>
-      <div id="product-component-1743814754809"></div>
-    </div>
-  </main>
+      
+<!-- Shopify Buy Button 开始 -->
+<div id='product-component-1743814754809'></div>
+<script type="text/javascript">
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
 
-  <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
-  <script type="text/javascript">
-    (function () {
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.head || document.body).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+
+    function ShopifyBuyInit() {
       var client = ShopifyBuy.buildClient({
         domain: 'momhomecare.myshopify.com',
-        storefrontAccessToken: '20efc49cd1e742fc772a8cdc9319f6e4'
+        storefrontAccessToken: '20efc49cd1e742fc772a8cdc9319f6e4',
       });
+
       ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
-          id: '8001311730471',
+          id: '1743814754809',
           node: document.getElementById('product-component-1743814754809'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
@@ -52,22 +71,23 @@
               contents: {
                 img: false,
                 title: false,
-                price: true
+                price: true,
               },
               text: {
                 button: 'Buy Now – $110 Launch Offer'
               }
             },
-            cart: {
-              startOpen: false
-            },
-            toggle: {
-              sticky: true
-            }
+            cart: { startOpen: false },
+            toggle: { sticky: true }
           }
         });
       });
-    })();
-  </script>
+    }
+  })();
+</script>
+<!-- Shopify Buy Button 结束 -->
+
+    </div>
+  </main>
 </body>
 </html>
