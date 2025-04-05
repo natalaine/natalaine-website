@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品介绍 - 纳澜羊毛被</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+<header class="shadow p-4">
+  <div class="container mx-auto flex justify-between">
+    <a href="/" class="text-xl font-bold">Natalaine</a>
+    <nav class="space-x-4 text-sm">
+      <a href="/">首页</a>
+      <a href="/products" class="font-semibold text-blue-600">产品</a>
+      <a href="/gift">送礼</a>
+      <a href="/en" class="text-sm">English</a>
+    </nav>
+  </div>
+</header>
+<main class="max-w-3xl mx-auto px-4 py-10">
+  <h1 class="text-3xl font-bold mb-4">纳澜 澳洲儿童羊毛被</h1>
+  <p class="text-gray-700 mb-4">专为 1-3 岁宝宝设计，采用澳洲 Downs 羊毛 + 60 支纯棉，亲肤透气，天然安心。</p>
+  <div class="bg-yellow-50 border border-yellow-200 p-4 rounded mb-6">
+    <p class="text-lg text-yellow-800 font-semibold">首发体验价：<span class="text-2xl text-red-600">$110</span>（原价 $220，仅限前 50 条）</p>
+  </div>
+  
+<!-- Shopify Buy Button 开始 -->
+<div id='product-component-1743814754809'></div>
+<script type="text/javascript">
+  /*<![CDATA[*/
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.body).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'momhomecare.myshopify.com',
+        storefrontAccessToken: '20efc49cd1e742fc772a8cdc9319f6e4',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('product', {
+          id: '8001311730471',
+          node: document.getElementById('product-component-1743814754809'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
+            product: {
+              buttonDestination: 'checkout',
+              layout: 'vertical',
+              contents: {
+                img: false,
+                title: true,
+                price: true,
+              },
+              text: {
+                button: '立即购买体验价 $110',
+              }
+            },
+            cart: {
+              startOpen: false,
+              popup: false,
+            },
+            toggle: {
+              sticky: true,
+              contents: {
+                count: true,
+                icon: true
+              },
+            }
+          }
+        });
+      });
+    }
+  })();
+  /*]]>*/
+</script>
+<!-- Shopify Buy Button 结束 -->
+
+</main>
+</body>
+</html>
