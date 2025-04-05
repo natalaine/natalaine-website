@@ -27,49 +27,54 @@
       nav a { display: inline-block; margin: 0.5rem; }
       .card, .grid2 div, .grid3 div { flex: 1 1 100%; }
     }
-    .site-header {
+    .header {
+  background: #fff;
   position: sticky;
   top: 0;
-  background: #fff;
-  padding: 1.2rem 1rem;
-  text-align: center;
-  z-index: 10;
+  z-index: 20;
+  border-bottom: 1px solid #eee;
 }
 
-.brand {
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #111;
 }
 
 .nav-links {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #444;
   font-size: 15px;
-  position: relative;
+  font-weight: 400;
+  transition: color 0.2s ease;
 }
 
-.nav-links a.active::after {
-  content: "";
-  display: block;
-  width: 80%;
-  height: 2px;
-  background: #222;
-  margin: 4px auto 0;
-  border-radius: 1px;
+.nav-links a.active {
+  font-weight: 600;
+  color: #000;
 }
 
 @media (max-width: 640px) {
-  .nav-links {
+  .nav-container {
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
   }
 }
 
@@ -77,16 +82,18 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="brand">纳澜 Natalaine</div>
-  <nav class="nav-links">
-    <a href="/" class="active">首页</a>
-    <a href="#philosophy">品牌理念</a>
-    <a href="#products">产品</a>
-    <a href="#gift">送礼推荐</a>
-    <a href="#faq">常见问题</a>
-    <a href="#partner">合作代理</a>
-  </nav>
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">纳澜 Natalaine</div>
+    <nav class="nav-links">
+      <a href="/" class="active">首页</a>
+      <a href="#philosophy">品牌理念</a>
+      <a href="#products">产品</a>
+      <a href="#gift">送礼推荐</a>
+      <a href="#faq">常见问题</a>
+      <a href="#partner">合作代理</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
