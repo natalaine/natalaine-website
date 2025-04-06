@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -22,16 +21,37 @@
       border-bottom: 1px solid #eee;
     }
 
-    .nav-container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+    ..nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+/* 中英文切换按钮容器 */
+.lang-switch {
+  margin-left: auto;
+}
+
+/* 切换按钮样式 */
+.lang-switch a {
+  font-size: 14px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  margin-left: 12px;
+}
+
+/* 鼠标悬停效果 */
+.lang-switch a:hover {
+  background-color: #f3f4f6;
+}
     .logo {
       font-size: 20px;
       font-weight: 600;
@@ -81,6 +101,8 @@
       <a href="#faq">常见问题</a>
       <a href="#partner">合作代理</a>
     </nav>
+    <div class="lang-switch">
+  <a href="/en/index.html">EN | English</a>
   </div>
 </header>
 
