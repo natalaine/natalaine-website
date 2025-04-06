@@ -1,20 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>纳澜 Natalaine - 澳洲儿童羊毛被</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Noto Sans SC', sans-serif; margin: 0; padding: 0; color: #222; background: #fff; line-height: 1.7; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+           margin: 0; padding: 0; color: #222; background: #fff; line-height: 1.7; }
     section { padding: 3rem 1.5rem; max-width: 880px; margin: auto; text-align: center; }
     h1, h2 { font-weight: 600; margin-bottom: 1.2rem; }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.6rem; }
 
-    /* 升级导航栏 */
     .header {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
       position: sticky;
       top: 0;
       z-index: 20;
@@ -22,40 +23,20 @@
     }
 
     .nav-container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+      max-width: 1000px;
+      margin: auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-/* 中英文切换按钮容器 */
-.lang-switch {
-  margin-left: auto;
-}
-
-/* 切换按钮样式 */
-.lang-switch a {
-  font-size: 14px;
-  padding: 4px 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #333;
-  transition: all 0.3s ease;
-  margin-left: 12px;
-}
-
-/* 鼠标悬停效果 */
-.lang-switch a:hover {
-  background-color: #f3f4f6;
-}
     .logo {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       color: #111;
+      letter-spacing: 0.5px;
     }
 
     .nav-links {
@@ -73,9 +54,49 @@
       transition: color 0.2s ease;
     }
 
-    .nav-links a.active {
-      font-weight: 600;
+    .nav-links a.active,
+    .nav-links a:hover {
       color: #000;
+      font-weight: 600;
+    }
+
+    .lang-switch a {
+      font-size: 13px;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #444;
+      margin-left: 1rem;
+    }
+
+    .lang-switch a:hover {
+      background: #f5f5f5;
+      border-color: #999;
+    }
+
+    .hero {
+      padding: 6rem 1.5rem 4rem;
+      background: linear-gradient(to bottom, #fff 40%, #f9f9f9 100%);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 1rem;
+      line-height: 1.8;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 2rem 1rem;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+      line-height: 1.6;
     }
 
     @media (max-width: 640px) {
@@ -83,9 +104,14 @@
         flex-direction: column;
         align-items: center;
       }
+      .nav-links {
+        justify-content: center;
+        margin-top: 0.8rem;
+      }
+      .lang-switch {
+        margin-top: 0.5rem;
+      }
     }
-
-    footer { text-align: center; padding: 1.5rem 1rem; font-size: 14px; color: #666; }
   </style>
 </head>
 <body>
@@ -102,23 +128,27 @@
       <a href="#partner">合作代理</a>
     </nav>
     <div class="lang-switch">
-  <a href="/en/index.html">EN | English</a>
+      <a href="/en/index.html">EN | English</a>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <h1>宝宝的第一条被子，必须是天然的</h1>
-  <p>我们只把预算花在材料和工艺上：甄选澳洲优质羊毛，天然零化学添加，精工手工制作，采用loft-advantage™ 结构</p>
+  <p>我们只把预算花在材料和工艺上：甄选澳洲优质羊毛，天然零化学添加，精工手工制作，采用loft-advantage™结构</p>
 </section>
 
-<section>
+<section id="philosophy">
   <h2>品牌理念</h2>
-  <p>「完美和高级，不是没有东西可加，而是没有东西该减」</p>
-  <p>                      —— 安托万·德·圣埃克苏佩里（《小王子》</p>
+  <p style="max-width: 700px; margin: auto; font-size: 1rem; color: #444; line-height: 1.8;">
+    「完美和高级，不是没有东西可加，而是没有东西该减」<br/>
+    —— 安托万·德·圣埃克苏佩里（《小王子》）
+  </p>
 </section>
 
 <footer>
-  &copy; 2025 纳澜 Natalaine Kids｜ 澳洲制造 ｜ 儿童天然羊毛被
+  © 2025 纳澜 Natalaine Kids ｜ 澳洲制造 ｜ 儿童天然羊毛被<br/>
+  合作咨询：jy.rui@outlook.com ｜ 微信公众号 @纳澜羊毛被
 </footer>
 
 </body>
