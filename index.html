@@ -23,8 +23,10 @@
     <!-- 顶部导航 -->
     <div class="flex justify-between items-center mb-20">
       <div class="flex items-center gap-3">
-        <img src="/boxnow-logo.png" alt="Boxnow Logo" class="h-12 w-12">
-        <span class="text-black text-2xl font-extrabold tracking-tight">Boxnow <span class="text-yellow-900">来箱啦</span></span>
+        <div class="bg-yellow-400 rounded-xl p-2 shadow">
+          <img src="/logo.svg" alt="Boxnow Logo" class="h-14 w-14">
+        </div>
+        <span class="text-black text-3xl font-extrabold tracking-tight">Boxnow <span class="text-yellow-900">来箱啦</span></span>
       </div>
       <ul class="hidden md:flex gap-10 text-sm md:text-base font-semibold">
         <li><a href="#features" class="text-black hover:text-white hover:bg-black px-3 py-1 rounded">服务亮点</a></li>
@@ -43,7 +45,7 @@
           Ship it smart. Ship it now.
         </p>
         <p class="text-lg md:text-xl text-gray-800 mb-10">
-          中澳集运 · 本地代采 · 全流程可视化客服<br>一站式极致物流体验，价格更透明。
+          集运首选品牌 · 极速发货到澳洲<br>支持淘宝/拼多多/1688 一键合包，价格透明。
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="#contact" class="bg-black text-white px-6 py-3 rounded-full text-base font-semibold hover:opacity-90">立即咨询</a>
@@ -58,66 +60,48 @@
     </div>
   </div>
 </section>
-  <!-- 服务亮点模块 -->
-<section class="bg-white py-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12 border-b pb-4">我们的优势</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div class="flex items-start gap-4">
-        <div class="text-3xl">🚚</div>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">中澳整柜拼柜 · 专线物流</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">提供空运、海运、整柜、拼柜服务，支持中国上门提货，澳洲门到门配送。</p>
-        </div>
+
+<!-- 服务亮点模块（Boxnow 专注 To C 集运服务） -->
+<section id="features" class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-black mb-14">🚀 Boxnow 服务亮点</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div class="bg-yellow-100 p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-black mb-2">小包集运</h3>
+        <p class="text-gray-700">支持淘宝拼多多1688 · 极速合包 · 门到门配送 · 实时客服</p>
       </div>
-      <div class="flex items-start gap-4">
-        <div class="text-3xl">🪑</div>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">佛山家具工厂代采</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">对接工厂，定制家具，支持直播选品、每日进度报告、透明物流。</p>
-        </div>
+      <div class="bg-yellow-100 p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-black mb-2">微信客服</h3>
+        <p class="text-gray-700">一对一服务 · 智能客服系统 · 物流状态随时掌握</p>
       </div>
-      <div class="flex items-start gap-4">
-        <div class="text-3xl">🔍</div>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">一对一客服 · 全流程可视化</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">每位客户配备专属客服，物流状态实时同步，保障体验。</p>
-        </div>
-      </div>
-      <div class="flex items-start gap-4">
-        <div class="text-3xl">📦</div>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">仓储免费 · 最优打包</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">提供免费仓储、换标、合包打包服务，帮您节省每一笔运费。</p>
-        </div>
+      <div class="bg-yellow-100 p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-black mb-2">全境上门揽件</h3>
+        <p class="text-gray-700">整合顺丰/德邦等国内快递资源 · 提供全境提货服务</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 品牌介绍模块（合并团队介绍 + 品牌理念） -->
-<section class="bg-gray-50 py-20 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6 border-b pb-3">关于我们</h2>
-    <p class="text-gray-700 text-base leading-relaxed mb-8">
-      Boxnow 是一家由中澳团队共同运营的集运服务平台，我们拥有跨境电商、物流、母婴品牌等多重背景，致力于通过更高效、透明、值得信赖的服务连接中国制造与澳洲消费者。我们坚信物流不仅是搬运，更是一次连接的过程。
+<!-- 品牌介绍模块（双品牌运营结构） -->
+<section id="about" class="bg-gray-50 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-black mb-6">🧩 双品牌战略</h2>
+    <p class="text-lg md:text-xl text-gray-800 mb-10">
+      我们旗下拥有两个独立品牌，服务不同客户群体：
     </p>
-    <div class="flex justify-center gap-8 flex-wrap">
-      <div class="text-center">
-        <div class="text-4xl">🇨🇳</div>
-        <p class="mt-2 text-sm text-gray-600">广州运营中心</p>
+    <div class="grid md:grid-cols-2 gap-10 text-left">
+      <div class="bg-white rounded-xl shadow p-8">
+        <h3 class="text-2xl font-bold text-black mb-2">📦 Boxnow 来箱啦</h3>
+        <p class="text-gray-700">专注个人用户（To C），提供淘宝/拼多多等平台小包集运、一件代发与实时客服服务。</p>
       </div>
-      <div class="text-center">
-        <div class="text-4xl">🇦🇺</div>
-        <p class="mt-2 text-sm text-gray-600">悉尼本地团队</p>
-      </div>
-      <div class="text-center">
-        <div class="text-4xl">🤝</div>
-        <p class="mt-2 text-sm text-gray-600">透明定价 · 没有隐藏消费</p>
+      <div class="bg-white rounded-xl shadow p-8">
+        <h3 class="text-2xl font-bold text-black mb-2">🔧 集刻 Jike Supply</h3>
+        <p class="text-gray-700">专注企业客户（To B），提供家具/工厂代采、传统供应链整合、仓储配送与跨境合规咨询等全链条服务。</p>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- 专业化页脚包含联系信息 -->
 <footer class="bg-black text-white text-sm py-14 px-6">
