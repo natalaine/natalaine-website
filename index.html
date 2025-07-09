@@ -14,43 +14,44 @@
   </style>
 </head>
 <body class="bg-white text-gray-900">
-  <!-- 顶部导航栏 -->
-  <nav class="flex justify-between items-center px-6 py-4 border-b border-gray-200 bg-white">
-    <div class="flex items-center gap-2">
-      <img src="boxnow-logo.png" alt="Boxnow Logo" class="h-10">
-      <span class="text-xl font-bold text-[var(--main-black)]">Boxnow <span class="text-yellow-500">来箱啦</span></span>
-    </div>
-    <ul class="hidden md:flex space-x-6 text-sm font-medium">
-      <li><a href="#hero" class="hover:text-[var(--main-yellow)]">首页</a></li>
-      <li><a href="#services" class="hover:text-[var(--main-yellow)]">服务亮点</a></li>
-      <li><a href="#compare" class="hover:text-[var(--main-yellow)]">发货对比</a></li>
-      <li><a href="#testimonials" class="hover:text-[var(--main-yellow)]">客户评价</a></li>
-      <li><a href="#contact" class="hover:text-[var(--main-yellow)]">联系我们</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero 主视觉区优化升级版（更具品牌感与空间感） -->
-<section class="bg-yellow-400 py-32 px-6">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12">
-    <div class="text-center md:text-left">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-black leading-tight mb-6">📦 来箱啦 Boxnow</h1>
-      <p class="text-xl md:text-2xl text-gray-800 mb-8">中澳集运更轻松 · 家具代采更透明 · 本地服务更靠谱</p>
-
-      <ul class="flex flex-wrap justify-center md:justify-start gap-3 text-base font-medium text-gray-800 mb-8">
-        <li class="bg-white px-4 py-1 rounded-full shadow">中澳专线</li>
-        <li class="bg-white px-4 py-1 rounded-full shadow">佛山家具</li>
-        <li class="bg-white px-4 py-1 rounded-full shadow">可视客服</li>
-        <li class="bg-white px-4 py-1 rounded-full shadow">仓储换标</li>
-      </ul>
-
-      <div class="flex justify-center md:justify-start gap-4 flex-wrap">
-        <a href="#contact" class="bg-black text-white px-8 py-3 rounded shadow hover:opacity-90">立即咨询</a>
-        <a href="pricing-boxnow.pdf" class="border border-black px-8 py-3 rounded hover:bg-black hover:text-white">下载报价单</a>
+  
+  <!-- Hero 主视觉区优化升级版（将导航整合入 Hero） -->
+<section class="bg-yellow-400 py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- 顶部导航 -->
+    <nav class="flex justify-between items-center mb-10">
+      <div class="flex items-center gap-2">
+        <img src="/logo.svg" alt="Boxnow Logo" class="h-10 w-10">
+        <span class="text-black text-xl font-bold">Boxnow <span class="text-yellow-900">来箱啦</span></span>
       </div>
-    </div>
+      <ul class="flex gap-6 text-sm md:text-base font-medium">
+        <li><a href="#" class="text-black hover:underline">首页</a></li>
+        <li><a href="#features" class="text-black hover:underline">服务亮点</a></li>
+        <li><a href="#about" class="text-black hover:underline">关于我们</a></li>
+      </ul>
+    </nav>
 
-    <div class="hidden md:block">
-      <img src="boxnow-logo.png" alt="Boxnow Logo" class="w-full max-w-md mx-auto">
+    <div class="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-12">
+      <div class="text-center md:text-left">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-black leading-tight mb-6">📦 来箱啦 Boxnow</h1>
+        <p class="text-xl md:text-2xl text-gray-800 mb-8">中澳集运更轻松 · 家具代采更透明 · 本地服务更靠谱</p>
+
+        <ul class="flex flex-wrap justify-center md:justify-start gap-3 text-base font-medium text-gray-800 mb-8">
+          <li class="bg-white px-4 py-1 rounded-full shadow">中澳专线</li>
+          <li class="bg-white px-4 py-1 rounded-full shadow">佛山家具</li>
+          <li class="bg-white px-4 py-1 rounded-full shadow">可视客服</li>
+          <li class="bg-white px-4 py-1 rounded-full shadow">仓储换标</li>
+        </ul>
+
+        <div class="flex justify-center md:justify-start gap-4 flex-wrap">
+          <a href="#contact" class="bg-black text-white px-8 py-3 rounded shadow hover:opacity-90">立即咨询</a>
+          <a href="pricing-boxnow.pdf" class="border border-black px-8 py-3 rounded hover:bg-black hover:text-white">下载报价单</a>
+        </div>
+      </div>
+
+      <div class="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-10 md:mb-0">
+        <img src="/logo.svg" alt="Boxnow Logo" class="w-full">
+      </div>
     </div>
   </div>
 </section>
