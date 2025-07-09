@@ -16,46 +16,49 @@ box<!DOCTYPE html>
 <body class="bg-white text-gray-900">
   
   <!-- Hero 主视觉区优化升级版（将导航整合入 Hero） -->
-<section class="bg-yellow-400 py-16 px-6">
-  <div class="max-w-7xl mx-auto">
+<section class="relative bg-yellow-400 overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.3),transparent_60%)] opacity-30"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
     <!-- 顶部导航 -->
-    <nav class="flex justify-between items-center mb-10">
+    <div class="flex justify-between items-center mb-16">
       <div class="flex items-center gap-2">
-        <img src="/boxnow-logo.png" alt="Boxnow Logo" class="h-10 w-10">
-        <span class="text-black text-xl font-bold">Boxnow <span class="text-yellow-900">来箱啦</span></span>
+        <img src="/logo.svg" alt="Boxnow Logo" class="h-12 w-12">
+        <span class="text-black text-2xl font-extrabold tracking-tight">Boxnow <span class="text-yellow-900">来箱啦</span></span>
       </div>
-      <ul class="flex gap-6 text-sm md:text-base font-medium">
-        <li><a href="#" class="text-black hover:underline">首页</a></li>
+      <ul class="hidden md:flex gap-8 text-sm md:text-base font-semibold">
         <li><a href="#features" class="text-black hover:underline">服务亮点</a></li>
         <li><a href="#about" class="text-black hover:underline">关于我们</a></li>
+        <li><a href="#contact" class="text-black hover:underline">联系我们</a></li>
       </ul>
-    </nav>
+    </div>
 
-    <div class="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-12">
-      <div class="text-center md:text-left">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-black leading-tight mb-6">📦 来箱啦 Boxnow</h1>
-        <p class="text-xl md:text-2xl text-gray-800 mb-8">中澳集运更轻松 · 家具代采更透明 · 本地服务更靠谱</p>
+    <!-- 主内容区域 -->
+    <div class="grid md:grid-cols-2 items-center gap-16">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-black leading-tight mb-6">
+          📦 来箱啦 Boxnow<br>
+          <span class="text-white bg-black inline-block px-2 py-1 mt-2 rounded">中澳集运 · 本地代采 · 可视客服</span>
+        </h1>
 
-        <ul class="flex flex-wrap justify-center md:justify-start gap-3 text-base font-medium text-gray-800 mb-8">
-          <li class="bg-white px-4 py-1 rounded-full shadow">中澳专线</li>
-          <li class="bg-white px-4 py-1 rounded-full shadow">佛山家具</li>
-          <li class="bg-white px-4 py-1 rounded-full shadow">可视客服</li>
-          <li class="bg-white px-4 py-1 rounded-full shadow">仓储换标</li>
-        </ul>
+        <p class="text-lg md:text-xl text-gray-900 mb-8 font-medium">
+          一站式跨境服务，极致物流体验，服务透明，价格可比。
+        </p>
 
-        <div class="flex justify-center md:justify-start gap-4 flex-wrap">
-          <a href="#contact" class="bg-black text-white px-8 py-3 rounded shadow hover:opacity-90">立即咨询</a>
-          <a href="pricing-boxnow.pdf" class="border border-black px-8 py-3 rounded hover:bg-black hover:text-white">下载报价单</a>
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="#contact" class="bg-black text-white px-6 py-3 rounded shadow hover:opacity-90">立即咨询</a>
+          <a href="pricing-boxnow.pdf" class="border border-black px-6 py-3 rounded hover:bg-black hover:text-white">下载报价单</a>
         </div>
       </div>
 
-      <div class="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-10 md:mb-0">
-        <img src="/boxnow-logo.png" alt="Boxnow Logo" class="w-full">
+      <!-- 替换 logo 为实际服务图片或微信图 -->
+      <div class="w-full max-w-sm mx-auto">
+        <img src="/wechat-qr.png" alt="微信二维码" class="w-full rounded-xl shadow-lg border border-black/10">
+        <p class="text-center mt-3 text-sm text-gray-800">添加客服 Boxnow_客服小二</p>
       </div>
     </div>
   </div>
 </section>
-
   <!-- 服务亮点模块 -->
 <section class="bg-white py-20 px-6">
   <div class="max-w-5xl mx-auto">
