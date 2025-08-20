@@ -1,111 +1,266 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BoxNow | 来箱啦 - 中澳集运 & 家具代采</title>
-
-  <!-- SEO 设置 -->
-  <meta name="description" content="来箱啦 BoxNow 专注中澳集运、佛山家具代采、澳洲本地仓储运营，空运海运一站式跨境物流服务，免费仓储、换标打包、可视化客服全流程透明保障。">
-  <meta name="keywords" content="中澳集运, 家具代采, 佛山仓库, 微信客服, 澳洲清关, BoxNow, 来箱啦">
-  <meta name="author" content="BoxNow 来箱啦">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph 设置（用于社交平台链接展示） -->
-  <meta property="og:title" content="BoxNow 来箱啦 - 中澳专线集运 & 家具代采平台">
-  <meta property="og:description" content="专注中澳跨境物流、家具代采与澳洲本地派送的高效平台。">
-  <meta property="og:image" content="https://boxnow.com.au/boxnow-logo.png">
-  <meta property="og:type" content="website">
-
-  <!-- 网站图标 -->
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- TailwindCSS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BOXNOW — Global Trade & Logistics Solutions</title>
+  <meta name="description" content="Cross-border consolidation, customs and last-mile delivery between Australia and China. One platform. One team." />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind (CDN for simplicity). For production, consider self-host or build pipeline -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root {
-      --main-yellow: #FFD500;
-      --main-black: #000000;
-    }
+    /* optional: smooth font rendering */
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
   </style>
 </head>
-<body class="bg-white text-gray-900">
-
-  <!-- Hero 主视觉区优化升级版（将导航整合入 Hero） -->
-<section class="relative bg-yellow-400 overflow-hidden">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.3),transparent_60%)] opacity-30"></div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40">
-    <!-- 顶部导航 -->
-    <div class="flex justify-between items-center mb-20">
-      <div class="flex items-center gap-3">
-        <div class="bg-yellow-400 rounded-xl p-2 shadow">
-          <img src="boxnow-logo.png" alt="Boxnow Logo" class="h-14 w-14">
+<body class="bg-slate-950 text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/75 border-b border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-lg bg-slate-100 text-slate-900 grid place-items-center font-bold">B</div>
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-wide text-lg">BOXNOW</div>
+          <div class="text-xs text-slate-300">Global Trade &amp; Logistics Solutions</div>
         </div>
-        <span class="text-black text-3xl font-extrabold tracking-tight">Boxnow <span class="text-yellow-900">来箱啦</span></span>
+      </a>
+      <nav id="nav" class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:text-white/90">Services</a>
+        <a href="#solutions" class="hover:text-white/90">Solutions</a>
+        <a href="#cases" class="hover:text-white/90">Case Studies</a>
+        <a href="#about" class="hover:text-white/90">About</a>
+        <a href="#contact" class="hover:text-white/90">Contact</a>
+        <a href="#quote" class="ml-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold">Get a Quote</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 hover:bg-white/10" aria-label="Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-white/10">
+      <div class="px-4 py-2 flex flex-col text-sm">
+        <a class="py-2" href="#services">Services</a>
+        <a class="py-2" href="#solutions">Solutions</a>
+        <a class="py-2" href="#cases">Case Studies</a>
+        <a class="py-2" href="#about">About</a>
+        <a class="py-2" href="#contact">Contact</a>
+        <a class="mt-2 px-4 py-2 rounded-xl bg-sky-500 text-slate-950 font-semibold w-max" href="#quote">Get a Quote</a>
       </div>
-      <ul class="hidden md:flex gap-10 text-sm md:text-base font-semibold">
-        <li><a href="#features" class="text-black hover:text-white hover:bg-black px-3 py-1 rounded">服务亮点</a></li>
-        <li><a href="#about" class="text-black hover:text-white hover:bg-black px-3 py-1 rounded">关于我们</a></li>
-        <li><a href="#contact" class="text-black hover:text-white hover:bg-black px-3 py-1 rounded">联系我们</a></li>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(60%_40%_at_50%_15%,_rgba(56,189,248,0.14),_transparent_60%)]"></div>
+    <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Ship it <span class="text-sky-400">smart</span>.<br/>
+          Ship it <span class="text-sky-400">now</span>.
+        </h1>
+        <p class="mt-5 text-slate-300 max-w-xl">
+          Cross-border consolidation, customs, and last-mile delivery between Australia and China. One platform. One team. Guaranteed clarity.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#quote" class="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold">Get Instant Quote</a>
+          <a href="#contact" class="px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5">Talk to Logistics Expert</a>
+        </div>
+        <div class="mt-6 text-xs text-slate-400">AU warehouses · CN consolidation hubs · 7/365 operations</div>
+      </div>
+      <div class="relative">
+        <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
+          <div class="text-sm text-slate-300 mb-3">Quick Track</div>
+          <form class="grid grid-cols-1 gap-3">
+            <input class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 focus:outline-none" placeholder="Enter tracking number">
+            <button class="px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-200" type="button">Track Shipment</button>
+          </form>
+          <div class="mt-6 grid grid-cols-3 divide-x divide-white/10 text-center">
+            <div class="py-3"><div class="text-2xl font-bold">48h</div><div class="text-xs text-slate-400">Avg. CN customs</div></div>
+            <div class="py-3"><div class="text-2xl font-bold">99.2%</div><div class="text-xs text-slate-400">On-time</div></div>
+            <div class="py-3"><div class="text-2xl font-bold">$</div><div class="text-xs text-slate-400">Transparent pricing</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold">Core Services</h2>
+    <p class="text-slate-300 mt-2">End-to-end solutions tailored for SMEs and brands shipping between AU ⇄ CN.</p>
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
+        <div class="text-sky-400 font-semibold">01</div>
+        <div class="mt-2 text-xl font-bold">Consolidation &amp; Forwarding</div>
+        <p class="mt-2 text-slate-300 text-sm">CN/AU hubs, carton/pallet level, FCL/LCL &amp; air.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
+        <div class="text-sky-400 font-semibold">02</div>
+        <div class="mt-2 text-xl font-bold">Customs &amp; Compliance</div>
+        <p class="mt-2 text-slate-300 text-sm">Documentation, tariffs, CIQ label review, permits.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
+        <div class="text-sky-400 font-semibold">03</div>
+        <div class="mt-2 text-xl font-bold">Last-mile Delivery</div>
+        <p class="mt-2 text-slate-300 text-sm">Domestic distribution, returns, POD &amp; COD options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="bg-slate-900/50 border-y border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Solutions by Use-case</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6 text-sm">
+        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Wine &amp; Beverages</div>
+        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Home &amp; Furniture</div>
+        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Mother &amp; Baby</div>
+        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Fashion &amp; Accessories</div>
+      </div>
+      <ul class="mt-6 text-slate-300 text-sm list-disc list-inside space-y-1">
+        <li>AU wine export to CN: VI1, COO (ChA), CN label &amp; CIQ support.</li>
+        <li>Bulk to parcel: pallet in, parcels out – omnichannel fulfillment.</li>
+        <li>Compliance playbooks: product HS, taxes, and docs checklist.</li>
       </ul>
     </div>
+  </section>
 
-    <!-- 主内容区域 -->
-    <div class="grid md:grid-cols-2 items-center gap-20">
+  <!-- Case Studies -->
+  <section id="cases" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold">Case Studies</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
+      <div class="rounded-2xl border border-white/10 p-6">
+        <div class="text-slate-300">AU → CN • Wine</div>
+        <div class="mt-2 text-lg font-bold">1-pallet pilot to 2x FCL in 90 days</div>
+        <ul class="mt-2 text-slate-300 list-disc list-inside">
+          <li>Label &amp; CIQ passed first time</li>
+          <li>Cost ↓ 18% vs. prior forwarder</li>
+          <li>OTD 99.4%</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6">
+        <div class="text-slate-300">CN → AU • Furniture</div>
+        <div class="mt-2 text-lg font-bold">Pallet-in, parcel-out omnichannel</div>
+        <ul class="mt-2 text-slate-300 list-disc list-inside">
+          <li>Damage rate &lt; 0.4%</li>
+          <li>Next-day metro delivery</li>
+          <li>WMS API connected</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6">
+        <div class="text-slate-300">AU ⇄ CN • D2C</div>
+        <div class="mt-2 text-lg font-bold">Cross-border returns unlocked</div>
+        <ul class="mt-2 text-slate-300 list-disc list-inside">
+          <li>RTO lead time ↓ 35%</li>
+          <li>CSAT 4.8/5</li>
+          <li>Carrier mix optimization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote (Netlify Forms) -->
+  <section id="quote" class="bg-slate-900/50 border-y border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Get a Quote</h2>
+      <p class="text-slate-300 mt-2">Tell us about your shipment. We’ll reply within 1 business day.</p>
+
+      <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            class="mt-8 grid md:grid-cols-3 gap-4">
+        <input type="hidden" name="form-name" value="quote">
+        <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+        <input name="name" required placeholder="Your name"
+               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
+        <input name="email" required type="email" placeholder="Email"
+               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
+        <input name="phone" placeholder="Phone / WeChat"
+               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
+
+        <input name="from" placeholder="From (City, Country)"
+               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-1">
+        <input name="to" placeholder="To (City, Country)"
+               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-1">
+        <input name="cargo" placeholder="Commodity / HS code (if known)"
+               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-1">
+
+        <textarea name="details" rows="4" placeholder="Volume/weight, timing, special requirements"
+                  class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-3"></textarea>
+
+        <button class="md:col-span-3 px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold">
+          Submit
+        </button>
+      </form>
+
+      <div class="text-xs text-slate-400 mt-3">Netlify Forms enabled. Configure notifications in Netlify dashboard.</div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-extrabold">About BoxNow</h2>
+    <p class="mt-3 text-slate-300 max-w-3xl">
+      We are a cross-border logistics team operating AU warehouses and CN consolidation hubs.
+      Our mission: make AU⇄CN trade simpler, faster, and more transparent for SMEs and brands.
+    </p>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-white/10 p-6 text-center">
+        <div class="text-4xl font-extrabold">8+</div>
+        <div class="text-slate-300 mt-1">Years</div>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6 text-center">
+        <div class="text-4xl font-extrabold">12</div>
+        <div class="text-slate-300 mt-1">Countries covered</div>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6 text-center">
+        <div class="text-4xl font-extrabold">74</div>
+        <div class="text-slate-300 mt-1">Client NPS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-slate-900/50 border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-14 grid md:grid-cols-2 gap-8 items-start">
       <div>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-black leading-tight mb-4">
-          📦 来箱啦 Boxnow
-        </h1>
-        <p class="text-xl md:text-2xl font-medium text-black mb-6">
-          Ship it smart. Ship it now.
-        </p>
-        <p class="text-lg md:text-xl text-gray-800 mb-10">
-          集运首选品牌 · 极速发货到澳洲<br>支持淘宝/拼多多/1688 一键合包，价格透明。
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#contact" class="bg-black text-white px-6 py-3 rounded-full text-base font-semibold hover:opacity-90">立即咨询</a>
-          <a href="pricing-boxnow.pdf" class="border border-black px-6 py-3 rounded-full text-base font-semibold hover:bg-black hover:text-white">下载报价单</a>
-        </div>
+        <h3 class="text-xl font-extrabold">Contact</h3>
+        <ul class="mt-4 space-y-2 text-slate-300 text-sm">
+          <li><span class="text-slate-400">Email:</span> info@boxnow.com.au</li>
+          <li><span class="text-slate-400">Offices:</span> Sydney · Guangzhou</li>
+          <li><span class="text-slate-400">Hours:</span> Mon–Sat 9:00–18:00 (AEST)</li>
+        </ul>
       </div>
-
-      <div class="w-full max-w-xs mx-auto">
-        <img src="/wechat-qr.png" alt="微信二维码" class="w-full rounded-xl shadow-xl border border-black/20">
-        <p class="text-center mt-4 text-sm text-gray-900 font-medium">添加客服 Boxnow_客服小二</p>
+      <div class="rounded-2xl border border-white/10 p-6">
+        <div class="text-sm text-slate-300 mb-3">Quick message</div>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-3">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
+          <input name="name" placeholder="Your name" class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
+          <input name="email" type="email" placeholder="Email" class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
+          <textarea name="message" rows="4" placeholder="Message" class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10"></textarea>
+          <button class="px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-200">Send</button>
+        </form>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 专业化页脚包含联系信息 -->
-<footer class="bg-black text-white text-sm py-14 px-6">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div>
-      <p class="font-semibold text-lg mb-2">📦 Boxnow 来箱啦</p>
-      <p class="text-gray-400 mb-1">专注中澳集运 · 佛山家具代采</p>
-      <p class="text-gray-400">© 2025 Boxnow Supply Chain. All rights reserved.</p>
-    </div>
-        <div>
-      <p class="text-base font-semibold mb-2">联系我们</p>
-      <p class="text-gray-300 mb-3">📮 邮箱：info@boxnow.com.au</p>
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div>© <span id="year"></span> BoxNow Australia. All rights reserved.</div>
       <div class="flex gap-4">
-        
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Sitemap</a>
       </div>
     </div>
+  </footer>
 
-    <div>
-      <p class="text-base font-semibold mb-2">相关链接</p>
-      <a href="#" class="block text-gray-300 hover:underline">隐私政策</a>
-      <a href="#" class="block text-gray-300 hover:underline">服务条款</a>
-      <a href="pricing-boxnow.pdf" class="block text-gray-300 hover:underline mt-2">下载报价单</a>
-    </div>
-  </div>
-</footer>
-
-
-</body>
-</html>
-
+  <script>
+    // year + mobile menu
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const mobile = document.getElementById('mobileNav');
+    if (btn) btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
