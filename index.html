@@ -3,268 +3,392 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BOXNOW — Global Trade & Logistics Solutions</title>
-  <meta name="description" content="Cross-border consolidation, customs and last-mile delivery between Australia and China. One platform. One team." />
-  <!-- Favicons -->
-<link rel="icon" href="/favicon-new.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=1">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=1">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
-<link rel="manifest" href="/site.webmanifest?v=1">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0A1733">
-<meta name="theme-color" content="#0A1733">
+  <title>BOXNOW — Customs, Hardware Supply & Sydney Warehouse</title>
+  <meta name="description" content="BoxNow provides customs clearance, hardware supply, consolidation & freight, supply chain advisory and Sydney Ultimo warehousing services." />
 
-  <!-- Tailwind (CDN for simplicity). For production, consider self-host or build pipeline -->
+  <!-- Favicons (保持不变，如有不同自行替换) -->
+  <link rel="icon" href="/favicon-new.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=1">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=1">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
+  <link rel="manifest" href="/site.webmanifest?v=1">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* optional: smooth font rendering */
     html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100">
+<body class="bg-white text-neutral-900">
+
   <!-- Header -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/75 border-b border-white/10">
+  <header class="sticky top-0 z-40 border-b border-neutral-200 bg-white/80 backdrop-blur">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <div class="h-9 w-9 rounded-lg bg-slate-100 text-slate-900 grid place-items-center font-bold">B</div>
+        <div class="h-9 w-9 rounded-md border border-neutral-900 grid place-items-center text-xs tracking-[0.2em]">
+          BN
+        </div>
         <div class="leading-tight">
-          <div class="font-extrabold tracking-wide text-lg">BOXNOW</div>
-          <div class="text-xs text-slate-300">Global Trade &amp; Logistics Solutions</div>
+          <div class="font-semibold tracking-[0.18em] text-xs uppercase">BOXNOW</div>
+          <div class="text-[11px] text-neutral-500">Customs · Hardware · Warehousing</div>
         </div>
       </a>
-      <nav id="nav" class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#services" class="hover:text-white/90">Services</a>
-        <a href="#solutions" class="hover:text-white/90">Solutions</a>
-        <a href="#cases" class="hover:text-white/90">Case Studies</a>
-        <a href="#about" class="hover:text-white/90">About</a>
-        <a href="#contact" class="hover:text-white/90">Contact</a>
-        <a href="#quote" class="ml-2 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold">Get a Quote</a>
+      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.18em]">
+        <a href="#services" class="hover:text-black">Services</a>
+        <a href="#hardware" class="hover:text-black">Hardware Supply</a>
+        <a href="#warehouse" class="hover:text-black">Sydney Warehouse</a>
+        <a href="#advisory" class="hover:text-black">Advisory</a>
+        <a href="#contact" class="hover:text-black">Contact</a>
       </nav>
-      <button id="menuBtn" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 hover:bg-white/10" aria-label="Menu">
-        <svg width="20" height="20" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M3 6h14M3 10h14M3 14h14"/></svg>
+      <button id="menuBtn" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-300" aria-label="Menu">
+        <span class="h-[1px] w-4 bg-neutral-900 mb-1 block"></span>
+        <span class="h-[1px] w-4 bg-neutral-900 mb-1 block"></span>
+        <span class="h-[1px] w-4 bg-neutral-900 block"></span>
       </button>
     </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-white/10">
+    <div id="mobileNav" class="md:hidden hidden border-t border-neutral-200 bg-white">
       <div class="px-4 py-2 flex flex-col text-sm">
         <a class="py-2" href="#services">Services</a>
-        <a class="py-2" href="#solutions">Solutions</a>
-        <a class="py-2" href="#cases">Case Studies</a>
-        <a class="py-2" href="#about">About</a>
+        <a class="py-2" href="#hardware">Hardware Supply</a>
+        <a class="py-2" href="#warehouse">Sydney Warehouse</a>
+        <a class="py-2" href="#advisory">Advisory</a>
         <a class="py-2" href="#contact">Contact</a>
-        <a class="mt-2 px-4 py-2 rounded-xl bg-sky-500 text-slate-950 font-semibold w-max" href="#quote">Get a Quote</a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(60%_40%_at_50%_15%,_rgba(56,189,248,0.14),_transparent_60%)]"></div>
-    <div class="relative mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+  <section class="border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-          Ship it <span class="text-sky-400">smart</span>.<br/>
-          Ship it <span class="text-sky-400">now</span>.
+        <p class="text-xs tracking-[0.25em] uppercase text-neutral-500">Sydney · Guangzhou</p>
+        <h1 class="mt-3 text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
+          One team for<br class="hidden md:block" />
+          <span class="underline underline-offset-4 decoration-[1px]">customs, hardware<br/>and warehousing.</span>
         </h1>
-        <p class="mt-5 text-slate-300 max-w-xl">
-          Cross-border consolidation, customs, and last-mile delivery between Australia and China. One platform. One team. Guaranteed clarity.
+        <p class="mt-5 text-sm md:text-base text-neutral-600 max-w-xl leading-relaxed">
+          BoxNow focuses on what we actually run today: customs clearance between Australia and China,
+          Ray’s engineering-led hardware supply, consolidation & traditional freight,
+          and a physical warehouse in Ultimo, Sydney.
         </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#quote" class="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold">Get Instant Quote</a>
-          <a href="#contact" class="px-5 py-3 rounded-xl border border-white/15 hover:bg-white/5">Talk to Logistics Expert</a>
+        <div class="mt-7 flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em]">
+          <a href="#hardware" class="px-5 py-3 rounded-full border border-neutral-900 bg-neutral-900 text-white hover:bg-white hover:text-neutral-900 transition">
+            View Hardware Supply
+          </a>
+          <a href="#warehouse" class="px-5 py-3 rounded-full border border-neutral-300 hover:border-neutral-900 hover:bg-neutral-50 transition">
+            Sydney Warehouse Pricing
+          </a>
         </div>
-        <div class="mt-6 text-xs text-slate-400">AU warehouses · CN consolidation hubs · 7/365 operations</div>
       </div>
-      <div class="relative">
-        <div class="rounded-2xl border border-white/10 bg-slate-900 p-6 shadow-2xl">
-          <div class="text-sm text-slate-300 mb-3">Quick Track</div>
-          <form class="grid grid-cols-1 gap-3">
-            <input class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 focus:outline-none" placeholder="Enter tracking number">
-            <button class="px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-200" type="button">Track Shipment</button>
-          </form>
-          <div class="mt-6 grid grid-cols-3 divide-x divide-white/10 text-center">
-            <div class="py-3"><div class="text-2xl font-bold">48h</div><div class="text-xs text-slate-400">Avg. CN customs</div></div>
-            <div class="py-3"><div class="text-2xl font-bold">99.2%</div><div class="text-xs text-slate-400">On-time</div></div>
-            <div class="py-3"><div class="text-2xl font-bold">$</div><div class="text-xs text-slate-400">Transparent pricing</div></div>
+      <div class="md:pl-6">
+        <div class="border border-neutral-200 rounded-2xl p-5 md:p-6">
+          <div class="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-3">At a glance</div>
+          <dl class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <dt class="text-neutral-500">Customs</dt>
+              <dd class="mt-1 font-medium">AU ⇄ CN clearance</dd>
+            </div>
+            <div>
+              <dt class="text-neutral-500">Hardware</dt>
+              <dd class="mt-1 font-medium">Trade-grade SKUs</dd>
+            </div>
+            <div>
+              <dt class="text-neutral-500">Warehouse</dt>
+              <dd class="mt-1 font-medium">Ultimo, Sydney</dd>
+            </div>
+            <div>
+              <dt class="text-neutral-500">Logistics</dt>
+              <dd class="mt-1 font-medium">Consolidation & freight</dd>
+            </div>
+          </dl>
+          <p class="mt-5 text-[11px] text-neutral-500 leading-relaxed">
+            No flashy promises, just clear scope: customs lodgement and follow-up, hardware sourcing from
+            Zhejiang & Foshan, pallet & carton storage in Ultimo, and practical supply chain advisory.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section id="services" class="border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <h2 class="text-xl md:text-2xl font-semibold">What we actually do today</h2>
+          <p class="mt-2 text-sm text-neutral-600 max-w-xl">
+            We keep the scope honest and focused. Five pillars, all live, no “coming soon”.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
+        <div class="border border-neutral-200 rounded-xl p-5">
+          <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">01 · Customs</p>
+          <h3 class="mt-2 font-medium">BoxNow Customs Clearance</h3>
+          <p class="mt-2 text-neutral-600">
+            Lodgement, documentation and follow-up for AU⇄CN imports and exports, focused on small to mid-size shipments.
+          </p>
+        </div>
+        <div class="border border-neutral-200 rounded-xl p-5">
+          <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">02 · Hardware</p>
+          <h3 class="mt-2 font-medium">Ray Hardware Supply</h3>
+          <p class="mt-2 text-neutral-600">
+            Engineering-led selection of high-turnover screws, brackets, hinges and fittings,
+            sourced from Zhejiang & Foshan and stocked in Australia.
+          </p>
+        </div>
+        <div class="border border-neutral-200 rounded-xl p-5">
+          <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">03 · Logistics</p>
+          <h3 class="mt-2 font-medium">Consolidation & Traditional Freight</h3>
+          <p class="mt-2 text-neutral-600">
+            Carton, pallet and container movements between AU and CN with simple, transparent communication.
+          </p>
+        </div>
+        <div class="border border-neutral-200 rounded-xl p-5">
+          <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">04 · Warehouse</p>
+          <h3 class="mt-2 font-medium">Ultimo, Sydney</h3>
+          <p class="mt-2 text-neutral-600">
+            Inner-Sydney storage for pallets and cartons, with basic value-added services for e-com and B2B clients.
+          </p>
+        </div>
+        <div class="border border-neutral-200 rounded-xl p-5">
+          <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">05 · Advisory</p>
+          <h3 class="mt-2 font-medium">Supply Chain Consulting</h3>
+          <p class="mt-2 text-neutral-600">
+            Straightforward advice on how to structure your AU–CN supply chain, costs, and risk.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Supply -->
+  <section id="hardware" class="border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <div class="flex flex-col md:flex-row gap-10 items-start">
+        <div class="md:w-1/2">
+          <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">Ray Hardware Supply</p>
+          <h2 class="mt-2 text-xl md:text-2xl font-semibold">Hardware, curated by an engineer</h2>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+            We don’t try to be a full Bunnings. We stock a lean list of high-turnover SKUs that trades actually run out of:
+            screws, brackets, cabinet hardware, door hardware and glass &amp; handrail fittings.
+            All selected with an engineering mindset and sourced directly from Zhejiang and Foshan.
+          </p>
+
+          <!-- Hardware category list -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+            <div>
+              <h3 class="font-medium text-neutral-900">Screws &amp; Fasteners</h3>
+              <ul class="mt-2 text-neutral-600 text-xs space-y-1">
+                <li>• Wood screws (core sizes: 4×25 / 4×35 / 4×45)</li>
+                <li>• Self-tapping &amp; self-drilling screws</li>
+                <li>• Washers &amp; masonry anchors</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-medium text-neutral-900">Cabinet Hardware</h3>
+              <ul class="mt-2 text-neutral-600 text-xs space-y-1">
+                <li>• Drawer slides (side-mount &amp; undermount)</li>
+                <li>• Soft-close concealed hinges</li>
+                <li>• KD fittings &amp; cabinet hangers</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-medium text-neutral-900">Door Hardware</h3>
+              <ul class="mt-2 text-neutral-600 text-xs space-y-1">
+                <li>• 304 floor &amp; wall door stops</li>
+                <li>• Magnetic door stops</li>
+                <li>• Basic hinges</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-medium text-neutral-900">Brackets &amp; Fittings</h3>
+              <ul class="mt-2 text-neutral-600 text-xs space-y-1">
+                <li>• L / T / U brackets</li>
+                <li>• Joist hangers</li>
+                <li>• Glass clamps &amp; handrail brackets</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mt-6 text-[11px] text-neutral-500 leading-relaxed">
+            Full SKU list available on request. Small trial orders and mixed cartons welcome. No retail walk-ins;
+            trade and project work only.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em]">
+            <a href="#contact" class="px-5 py-3 rounded-full border border-neutral-900 bg-neutral-900 text-white hover:bg-white hover:text-neutral-900 transition">
+              Request SKU List
+            </a>
+            <a href="#warehouse" class="px-5 py-3 rounded-full border border-neutral-300 hover:border-neutral-900 hover:bg-neutral-50 transition">
+              See Sydney warehouse options
+            </a>
           </div>
         </div>
+
+        <!-- Image / gallery side -->
+        <div class="md:w-1/2">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="aspect-[4/3] border border-neutral-200 rounded-xl overflow-hidden bg-neutral-100">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Wood_screws.jpg"
+                   alt="Wood screws" class="w-full h-full object-cover grayscale" />
+            </div>
+            <div class="aspect-[4/3] border border-neutral-200 rounded-xl overflow-hidden bg-neutral-100">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Concealed_hinge.JPG"
+                   alt="Concealed hinges" class="w-full h-full object-cover grayscale" />
+            </div>
+            <div class="aspect-[4/3] border border-neutral-200 rounded-xl overflow-hidden bg-neutral-100">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Drawer_slides.jpg"
+                   alt="Drawer slides" class="w-full h-full object-cover grayscale" />
+            </div>
+            <div class="aspect-[4/3] border border-neutral-200 rounded-xl overflow-hidden bg-neutral-100">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Glass_clamp.jpg"
+                   alt="Glass clamps" class="w-full h-full object-cover grayscale" />
+            </div>
+          </div>
+          <p class="mt-3 text-[11px] text-neutral-500">
+            Images are indicative only. Final packaging and specifications depend on the agreed SKU list.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl md:text-3xl font-extrabold">Core Services</h2>
-    <p class="text-slate-300 mt-2">End-to-end solutions tailored for SMEs and brands shipping between AU ⇄ CN.</p>
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
-      <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
-        <div class="text-sky-400 font-semibold">01</div>
-        <div class="mt-2 text-xl font-bold">Consolidation &amp; Forwarding</div>
-        <p class="mt-2 text-slate-300 text-sm">CN/AU hubs, carton/pallet level, FCL/LCL &amp; air.</p>
+  <!-- Sydney Warehouse & Pricing -->
+  <section id="warehouse" class="border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">Sydney Ultimo Warehouse</p>
+      <h2 class="mt-2 text-xl md:text-2xl font-semibold">Inner-Sydney storage, simple pricing</h2>
+      <p class="mt-3 text-sm text-neutral-600 max-w-2xl leading-relaxed">
+        Our Ultimo warehouse is designed for clients who need city-proximate storage rather than the cheapest land.
+        Pallets and cartons in, basic handling and dispatch out. No complicated software, just clear costs.
+      </p>
+
+      <!-- Pricing grid (用占位符，部署前你自己改真实价格) -->
+      <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
+        <div class="border border-neutral-200 rounded-xl p-6 flex flex-col">
+          <h3 class="font-medium text-neutral-900">Pallet Storage</h3>
+          <p class="mt-2 text-sm text-neutral-600 flex-1">
+            For bulk stock and hardware cartons.
+          </p>
+          <p class="mt-4 text-xs text-neutral-500">
+            Example placeholder: from <span class="font-medium">A$XX / pallet / week</span><br/>
+            (adjust to your actual rate before going live)
+          </p>
+        </div>
+        <div class="border border-neutral-200 rounded-xl p-6 flex flex-col">
+          <h3 class="font-medium text-neutral-900">Carton Storage</h3>
+          <p class="mt-2 text-sm text-neutral-600 flex-1">
+            For smaller clients and SKU-light operations.
+          </p>
+          <p class="mt-4 text-xs text-neutral-500">
+            Example placeholder: from <span class="font-medium">A$X / carton / week</span><br/>
+            (update with real pricing)
+          </p>
+        </div>
+        <div class="border border-neutral-200 rounded-xl p-6 flex flex-col">
+          <h3 class="font-medium text-neutral-900">Handling &amp; Dispatch</h3>
+          <p class="mt-2 text-sm text-neutral-600 flex-1">
+            Inbound check, basic labelling and handover to your carrier.
+          </p>
+          <p class="mt-4 text-xs text-neutral-500">
+            Example placeholder: from <span class="font-medium">A$X / order</span> or project-based quote.
+          </p>
+        </div>
       </div>
-      <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
-        <div class="text-sky-400 font-semibold">02</div>
-        <div class="mt-2 text-xl font-bold">Customs &amp; Compliance</div>
-        <p class="mt-2 text-slate-300 text-sm">Documentation, tariffs, CIQ label review, permits.</p>
-      </div>
-      <div class="rounded-2xl border border-white/10 bg-slate-900 p-6">
-        <div class="text-sky-400 font-semibold">03</div>
-        <div class="mt-2 text-xl font-bold">Last-mile Delivery</div>
-        <p class="mt-2 text-slate-300 text-sm">Domestic distribution, returns, POD &amp; COD options.</p>
+
+      <p class="mt-6 text-[11px] text-neutral-500">
+        Final pricing depends on volume, product type and service level. We keep the structure simple and transparent.
+      </p>
+
+      <div class="mt-5 flex flex-wrap gap-3 text-xs uppercase tracking-[0.18em]">
+        <a href="#contact" class="px-5 py-3 rounded-full border border-neutral-900 bg-neutral-900 text-white hover:bg-white hover:text-neutral-900 transition">
+          Discuss a warehouse quote
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Solutions -->
-  <section id="solutions" class="bg-slate-900/50 border-y border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Solutions by Use-case</h2>
-      <div class="mt-8 grid md:grid-cols-4 gap-6 text-sm">
-        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Wine &amp; Beverages</div>
-        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Home &amp; Furniture</div>
-        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Mother &amp; Baby</div>
-        <div class="rounded-2xl border border-white/10 p-5 hover:bg-white/5">Fashion &amp; Accessories</div>
-      </div>
-      <ul class="mt-6 text-slate-300 text-sm list-disc list-inside space-y-1">
-        <li>AU wine export to CN: VI1, COO (ChA), CN label &amp; CIQ support.</li>
-        <li>Bulk to parcel: pallet in, parcels out – omnichannel fulfillment.</li>
-        <li>Compliance playbooks: product HS, taxes, and docs checklist.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Case Studies -->
-  <section id="cases" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl md:text-3xl font-extrabold">Case Studies</h2>
-    <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
-      <div class="rounded-2xl border border-white/10 p-6">
-        <div class="text-slate-300">AU → CN • Wine</div>
-        <div class="mt-2 text-lg font-bold">1-pallet pilot to 2x FCL in 90 days</div>
-        <ul class="mt-2 text-slate-300 list-disc list-inside">
-          <li>Label &amp; CIQ passed first time</li>
-          <li>Cost ↓ 18% vs. prior forwarder</li>
-          <li>OTD 99.4%</li>
+  <!-- Advisory / Customs & Freight 简要合并模块 -->
+  <section id="advisory" class="border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 py-12 md:py-16 grid md:grid-cols-2 gap-10">
+      <div>
+        <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">Customs &amp; Freight</p>
+        <h2 class="mt-2 text-xl md:text-2xl font-semibold">BoxNow Customs &amp; Logistics</h2>
+        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+          We handle the unglamorous work around AU⇄CN customs clearance and traditional freight, including documentation,
+          classification, coordination with brokers and forwarders, and keeping you updated in plain language.
+        </p>
+        <ul class="mt-4 text-sm text-neutral-700 space-y-1">
+          <li>• Import &amp; export declarations</li>
+          <li>• HS code discussion and basic tariff checks</li>
+          <li>• Coordination with your chosen carriers and forwarders</li>
+          <li>• Focus on small to mid-size shipments, not mega-volume only</li>
         </ul>
       </div>
-      <div class="rounded-2xl border border-white/10 p-6">
-        <div class="text-slate-300">CN → AU • Furniture</div>
-        <div class="mt-2 text-lg font-bold">Pallet-in, parcel-out omnichannel</div>
-        <ul class="mt-2 text-slate-300 list-disc list-inside">
-          <li>Damage rate &lt; 0.4%</li>
-          <li>Next-day metro delivery</li>
-          <li>WMS API connected</li>
+      <div>
+        <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">Supply Chain Advisory</p>
+        <h2 class="mt-2 text-xl md:text-2xl font-semibold">Straightforward supply chain advice</h2>
+        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+          Advisory is not a big consulting project. It is usually a few focused calls, some numbers, and a clear structure
+          for how you should move your goods and where the risk points are.
+        </p>
+        <ul class="mt-4 text-sm text-neutral-700 space-y-1">
+          <li>• AU–CN route &amp; mode selection</li>
+          <li>• Cost breakdown and margin thinking</li>
+          <li>• Warehouse and inventory positioning</li>
+          <li>• Hardware + logistics combined flows, if relevant</li>
         </ul>
-      </div>
-      <div class="rounded-2xl border border-white/10 p-6">
-        <div class="text-slate-300">AU ⇄ CN • D2C</div>
-        <div class="mt-2 text-lg font-bold">Cross-border returns unlocked</div>
-        <ul class="mt-2 text-slate-300 list-disc list-inside">
-          <li>RTO lead time ↓ 35%</li>
-          <li>CSAT 4.8/5</li>
-          <li>Carrier mix optimization</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote (Netlify Forms) -->
-  <section id="quote" class="bg-slate-900/50 border-y border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-16">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Get a Quote</h2>
-      <p class="text-slate-300 mt-2">Tell us about your shipment. We’ll reply within 1 business day.</p>
-
-      <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-            class="mt-8 grid md:grid-cols-3 gap-4">
-        <input type="hidden" name="form-name" value="quote">
-        <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-
-        <input name="name" required placeholder="Your name"
-               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
-        <input name="email" required type="email" placeholder="Email"
-               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
-        <input name="phone" placeholder="Phone / WeChat"
-               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
-
-        <input name="from" placeholder="From (City, Country)"
-               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-1">
-        <input name="to" placeholder="To (City, Country)"
-               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-1">
-        <input name="cargo" placeholder="Commodity / HS code (if known)"
-               class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-1">
-
-        <textarea name="details" rows="4" placeholder="Volume/weight, timing, special requirements"
-                  class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10 md:col-span-3"></textarea>
-
-        <button class="md:col-span-3 px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold">
-          Submit
-        </button>
-      </form>
-
-      <div class="text-xs text-slate-400 mt-3">Netlify Forms enabled. Configure notifications in Netlify dashboard.</div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="mx-auto max-w-6xl px-4 py-16">
-    <h2 class="text-2xl md:text-3xl font-extrabold">About BoxNow</h2>
-    <p class="mt-3 text-slate-300 max-w-3xl">
-      We are a cross-border logistics team operating AU warehouses and CN consolidation hubs.
-      Our mission: make AU⇄CN trade simpler, faster, and more transparent for SMEs and brands.
-    </p>
-    <div class="mt-6 grid md:grid-cols-3 gap-6">
-      <div class="rounded-2xl border border-white/10 p-6 text-center">
-        <div class="text-4xl font-extrabold">8+</div>
-        <div class="text-slate-300 mt-1">Years</div>
-      </div>
-      <div class="rounded-2xl border border-white/10 p-6 text-center">
-        <div class="text-4xl font-extrabold">12</div>
-        <div class="text-slate-300 mt-1">Countries covered</div>
-      </div>
-      <div class="rounded-2xl border border-white/10 p-6 text-center">
-        <div class="text-4xl font-extrabold">74</div>
-        <div class="text-slate-300 mt-1">Client NPS</div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-slate-900/50 border-t border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-14 grid md:grid-cols-2 gap-8 items-start">
+  <section id="contact">
+    <div class="mx-auto max-w-6xl px-4 py-12 md:py-16 grid md:grid-cols-2 gap-10">
       <div>
-        <h3 class="text-xl font-extrabold">Contact</h3>
-        <ul class="mt-4 space-y-2 text-slate-300 text-sm">
-          <li><span class="text-slate-400">Email:</span> info@boxnow.com.au</li>
-          <li><span class="text-slate-400">Offices:</span> Sydney · Guangzhou</li>
-          <li><span class="text-slate-400">Hours:</span> Mon–Sat 9:00–18:00 (AEST)</li>
+        <p class="text-[11px] tracking-[0.2em] uppercase text-neutral-500">Contact</p>
+        <h2 class="mt-2 text-xl md:text-2xl font-semibold">Tell us what you’re trying to do</h2>
+        <p class="mt-3 text-sm text-neutral-600 max-w-md leading-relaxed">
+          A brief message with some numbers is the best way to start: what you move, rough volume, direction
+          (AU→CN or CN→AU), and whether you also care about hardware and warehousing.
+        </p>
+        <ul class="mt-4 text-sm text-neutral-700 space-y-1">
+          <li><span class="text-neutral-500">Email:</span> info@boxnow.com.au</li>
+          <li><span class="text-neutral-500">Location:</span> Sydney (Ultimo) · Guangzhou</li>
         </ul>
       </div>
-      <div class="rounded-2xl border border-white/10 p-6">
-        <div class="text-sm text-slate-300 mb-3">Quick message</div>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-3">
+      <div class="border border-neutral-200 rounded-xl p-6">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-3 text-sm">
           <input type="hidden" name="form-name" value="contact">
           <p class="hidden"><label>Don’t fill this out: <input name="bot-field"></label></p>
-          <input name="name" placeholder="Your name" class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
-          <input name="email" type="email" placeholder="Email" class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10">
-          <textarea name="message" rows="4" placeholder="Message" class="px-4 py-3 rounded-xl bg-slate-800 border border-white/10"></textarea>
-          <button class="px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-200">Send</button>
+          <input name="name" placeholder="Name" class="px-3 py-2.5 rounded-md border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          <input name="email" type="email" placeholder="Email" class="px-3 py-2.5 rounded-md border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          <input name="topic" placeholder="Customs / Hardware / Warehouse / Advisory" class="px-3 py-2.5 rounded-md border border-neutral-200 focus:outline-none focus:border-neutral-900">
+          <textarea name="message" rows="4" placeholder="Shipment details, hardware needs, or warehouse volume"
+                    class="px-3 py-2.5 rounded-md border border-neutral-200 focus:outline-none focus:border-neutral-900"></textarea>
+          <button class="mt-1 px-4 py-2.5 rounded-md border border-neutral-900 bg-neutral-900 text-white text-xs tracking-[0.18em] uppercase hover:bg-white hover:text-neutral-900 transition">
+            Send Message
+          </button>
         </form>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+  <footer class="border-t border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500">
       <div>© <span id="year"></span> BoxNow Australia. All rights reserved.</div>
       <div class="flex gap-4">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Sitemap</a>
+        <span>Customs · Hardware · Warehousing</span>
       </div>
     </div>
   </footer>
 
   <script>
-    // year + mobile menu
     document.getElementById('year').textContent = new Date().getFullYear();
     const btn = document.getElementById('menuBtn');
     const mobile = document.getElementById('mobileNav');
@@ -272,3 +396,4 @@
   </script>
 </body>
 </html>
+
